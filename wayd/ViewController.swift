@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 	
+	@IBOutlet weak var activityTableView: UITableView!
+	
 	var results = [(String, NSDate)]()
 
 	override func viewDidLoad() {
@@ -77,7 +79,7 @@ class ViewController: UIViewController {
 					self.presentAlert(q)
 				} else if let result = action.result {
 					self.results.append((result, NSDate()))
-					print(self.results.count)
+					self.activityTableView.reloadData()
 				}
 			}
 			alert.addAction(alertAction)
@@ -89,36 +91,27 @@ class ViewController: UIViewController {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
-
-	
 }
 
-class Question {
-	var text: String
-	var actions: [Action]
-	
-	init(text: String, actions: [Action]) {
-		self.text = text
-		self.actions = actions
+extension ViewController: UITableViewDataSource {
+	func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+		return 1
 	}
-}
-
-class Action {
-	var title: String
-	var text: String?
-	var question: Question?
-	var result: String?
 	
-	init(title: String, text: String? = nil, question: Question? = nil, result: String? = nil) {
-		self.title = title
-		if let text = text, let result = result {
-			self.text = text
-			self.result = result
-		} else if let question = question {
-			self.question = question
-		} else if let result = result {
-			self.result = result
-		}
+	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		tableView.hidden = results.count > 0 ? false : true
+		return results.count
+	}
+	
+	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+		let cell = tableView.dequeueReusableCellWithIdentifier("ActivityCell", forIndexPath: indexPath)
+		
+		let activity = results[indexPath.row]
+		
+		cell.textLabel?.text = activity.0
+		cell.detailTextLabel?.text = "\(activity.1)"
+		
+		return cell
 	}
 }
 
