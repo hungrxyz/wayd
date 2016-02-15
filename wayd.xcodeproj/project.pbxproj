@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA4355B11C7153D2007E36DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4355B01C7153D2007E36DF /* AppDelegate.swift */; };
+		FA4355B31C7153D3007E36DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4355B21C7153D3007E36DF /* ViewController.swift */; };
+		FA4355B61C7153D3007E36DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4355B41C7153D3007E36DF /* Main.storyboard */; };
+		FA4355B91C7153D3007E36DF /* wayd.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA4355B71C7153D3007E36DF /* wayd.xcdatamodeld */; };
+		FA4355BB1C7153D3007E36DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA4355BA1C7153D3007E36DF /* Assets.xcassets */; };
+		FA4355BE1C7153D3007E36DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4355BC1C7153D3007E36DF /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FA4355AD1C7153D2007E36DF /* wayd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wayd.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA4355B01C7153D2007E36DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA4355B21C7153D3007E36DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA4355B51C7153D3007E36DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FA4355B81C7153D3007E36DF /* wayd.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = wayd.xcdatamodel; sourceTree = "<group>"; };
+		FA4355BA1C7153D3007E36DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA4355BD1C7153D3007E36DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA4355BF1C7153D3007E36DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA4355AA1C7153D2007E36DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA4355A41C7153D2007E36DF = {
+			isa = PBXGroup;
+			children = (
+				FA4355AF1C7153D2007E36DF /* wayd */,
+				FA4355AE1C7153D2007E36DF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA4355AE1C7153D2007E36DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA4355AD1C7153D2007E36DF /* wayd.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA4355AF1C7153D2007E36DF /* wayd */ = {
+			isa = PBXGroup;
+			children = (
+				FA4355B01C7153D2007E36DF /* AppDelegate.swift */,
+				FA4355B21C7153D3007E36DF /* ViewController.swift */,
+				FA4355B41C7153D3007E36DF /* Main.storyboard */,
+				FA4355BA1C7153D3007E36DF /* Assets.xcassets */,
+				FA4355BC1C7153D3007E36DF /* LaunchScreen.storyboard */,
+				FA4355BF1C7153D3007E36DF /* Info.plist */,
+				FA4355B71C7153D3007E36DF /* wayd.xcdatamodeld */,
+			);
+			path = wayd;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA4355AC1C7153D2007E36DF /* wayd */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA4355C21C7153D3007E36DF /* Build configuration list for PBXNativeTarget "wayd" */;
+			buildPhases = (
+				FA4355A91C7153D2007E36DF /* Sources */,
+				FA4355AA1C7153D2007E36DF /* Frameworks */,
+				FA4355AB1C7153D2007E36DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wayd;
+			productName = wayd;
+			productReference = FA4355AD1C7153D2007E36DF /* wayd.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA4355A51C7153D2007E36DF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Zel Marko";
+				TargetAttributes = {
+					FA4355AC1C7153D2007E36DF = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = FA4355A81C7153D2007E36DF /* Build configuration list for PBXProject "wayd" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA4355A41C7153D2007E36DF;
+			productRefGroup = FA4355AE1C7153D2007E36DF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA4355AC1C7153D2007E36DF /* wayd */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA4355AB1C7153D2007E36DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA4355BE1C7153D3007E36DF /* LaunchScreen.storyboard in Resources */,
+				FA4355BB1C7153D3007E36DF /* Assets.xcassets in Resources */,
+				FA4355B61C7153D3007E36DF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA4355A91C7153D2007E36DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA4355B31C7153D3007E36DF /* ViewController.swift in Sources */,
+				FA4355B11C7153D2007E36DF /* AppDelegate.swift in Sources */,
+				FA4355B91C7153D3007E36DF /* wayd.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FA4355B41C7153D3007E36DF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA4355B51C7153D3007E36DF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FA4355BC1C7153D3007E36DF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA4355BD1C7153D3007E36DF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA4355C01C7153D3007E36DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA4355C11C7153D3007E36DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA4355C31C7153D3007E36DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = wayd/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zzzel.wayd;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FA4355C41C7153D3007E36DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = wayd/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zzzel.wayd;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA4355A81C7153D2007E36DF /* Build configuration list for PBXProject "wayd" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA4355C01C7153D3007E36DF /* Debug */,
+				FA4355C11C7153D3007E36DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA4355C21C7153D3007E36DF /* Build configuration list for PBXNativeTarget "wayd" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA4355C31C7153D3007E36DF /* Debug */,
+				FA4355C41C7153D3007E36DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FA4355B71C7153D3007E36DF /* wayd.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FA4355B81C7153D3007E36DF /* wayd.xcdatamodel */,
+			);
+			currentVersion = FA4355B81C7153D3007E36DF /* wayd.xcdatamodel */;
+			path = wayd.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FA4355A51C7153D2007E36DF /* Project object */;
+}
