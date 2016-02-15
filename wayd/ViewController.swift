@@ -10,11 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 	
-	let workData = ["first": "Did you do everything you planned today?", "firstYes": "Good, you can relax, tomorrow is another day", "firstNo": "Okay, get to work!"]
-	let relaxData = ["first": "Did you do everything you planned today?", "firstYes": "Okay, you can relax.", "firstNo": "No relaxing yet, get to work!"]
-	let sleepData = ["first": "Did you do everything you planned today?", "firstYes": "Okay, you can go to sleep.", "firstNo": "No slepping yet, get to work!"]
-	let workoutData = ["first": "Did you workout today already?", "firstYes": "Did you do everything you planned today?", "firstNo": "Okay, go get that workout in.", "secondYes": "Okay, go get that workout in.", "secondNo": "Once a day is good, priorities man. Get that work done instead!"]
-	let eatData = ["first": "When was the last time you ate?", "1": "Go get that fuel for your body", "2": "Alright, get a snack", "3": "NO! This is unercessary"]
+	var results = [(String, NSDate)]()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -26,22 +22,22 @@ class ViewController: UIViewController {
 		
 		let workQuestion = Question(text: "Did you do everything you planned today? 🤔",
 			actions: [
-				Action(title: "✔️ Yes", text: "Good, you can relax, tomorrow is another day 👍", question: nil),
-				Action(title: "❌ No", text: "Okay, get to work! ✌️", question: nil)
+				Action(title: "✔️ Yes", text: "Good, you can relax, tomorrow is another day 👍", result: "relax"),
+				Action(title: "❌ No", text: "Okay, get to work! ✌️", result: "work")
 			])
 		let workAction = Action(title: "👷 Work", text: nil, question: workQuestion)
 		
 		let relaxQuestion = Question(text: "Did you do everything you planned today? 🤔",
 			actions: [
-				Action(title: "✔️ Yes", text: "Okay, you can relax. 👍", question: nil),
-				Action(title: "❌ No", text: "No relaxing yet, get to work! 😤", question: nil)
+				Action(title: "✔️ Yes", text: "Okay, you can relax. 👍", result: "relax"),
+				Action(title: "❌ No", text: "No relaxing yet, get to work! 😤", result: "work")
 			])
 		let relaxAction = Action(title: "🕹 Relax", text: nil, question: relaxQuestion)
 		
 		let sleepQuestion = Question(text: "Did you do everything you planned today? 🤔",
 			actions: [
-				Action(title: "✔️ Yes", text: "Okay, you can go to sleep. 👍", question: nil),
-				Action(title: "❌ No", text: "No sleeping yet, get to work! 😤", question: nil)
+				Action(title: "✔️ Yes", text: "Okay, you can go to sleep. 👍", result: "sleep"),
+				Action(title: "❌ No", text: "No sleeping yet, get to work! 😤", result: "work")
 			])
 		let sleepAction = Action(title: "💤 Sleep", text: nil, question: sleepQuestion)
 		
@@ -50,18 +46,18 @@ class ViewController: UIViewController {
 				Action(title: "✔️ Yes", text: nil,
 					question: Question(text: "Did you do everything you planned today? 🤔",
 						actions: [
-						Action(title: "✔️ Yes", text: "Okay go get that workout in 👊", question: nil),
-						Action(title: "❌ No", text: "Once a day is good, priorities man. Get that work done instead! 😤", question: nil)
+							Action(title: "✔️ Yes", text: "Okay go get that workout in 👊", result: "workout"),
+							Action(title: "❌ No", text: "Once a day is good, priorities man. Get that work done instead! 😤", result: "work")
 						])),
-				Action(title: "❌ No", text: "Okay, go get that workout in. 👊", question: nil)
+				Action(title: "❌ No", text: "Okay, go get that workout in. 👊", result: "workout")
 			])
 		let workoutAction = Action(title: " 🏋 Workout", text: nil, question: workoutQuestion)
 		
 		let eatQuestion = Question(text: "When was the last time you ate? 🤔",
 			actions: [
-				Action(title: "😵 Didn't eat today yet", text: "Go get the body fuel. 🤗", question: nil),
-				Action(title: "😇 Between 3 and 6 hours ago", text: "Okay, grab a snack. 🍫", question: nil),
-				Action(title: "😆 Less than 3 hours ago", text: "No food for you, get back to what you were doing! 😏", question: nil)
+				Action(title: "😵 Didn't eat today yet", text: "Go get the body fuel. 🤗", result: "eat"),
+				Action(title: "😇 Between 3 and 6 hours ago", text: "Okay, grab a snack. 🍫", result: "snack"),
+				Action(title: "😆 Less than 3 hours ago", text: "No food for you, get back to what you were doing! 😏", result: "no eating")
 			])
 		let eatAction = Action(title: "🍽 Eat", text: nil, question: eatQuestion)
 
@@ -76,9 +72,12 @@ class ViewController: UIViewController {
 			let alertAction = UIAlertAction(title: action.title, style: .Default) { _ in
 				if let furtherQuestion = action.question {
 					self.presentAlert(furtherQuestion)
-				} else if let text = action.text {
-					let q = Question(text: text, actions: [Action(title: "Okay", text: nil, question: nil)])
+				} else if let text = action.text, let result = action.result {
+					let q = Question(text: text, actions: [Action(title: "Okay", result: result)])
 					self.presentAlert(q)
+				} else if let result = action.result {
+					self.results.append((result, NSDate()))
+					print(self.results.count)
 				}
 			}
 			alert.addAction(alertAction)
@@ -108,13 +107,17 @@ class Action {
 	var title: String
 	var text: String?
 	var question: Question?
+	var result: String?
 	
-	init(title: String, text: String?, question: Question?) {
+	init(title: String, text: String? = nil, question: Question? = nil, result: String? = nil) {
 		self.title = title
-		if let text = text {
+		if let text = text, let result = result {
 			self.text = text
+			self.result = result
 		} else if let question = question {
 			self.question = question
+		} else if let result = result {
+			self.result = result
 		}
 	}
 }
